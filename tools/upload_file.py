@@ -62,6 +62,7 @@ class UploadFileTool(Tool):
                 "filename": result.get("filename", ""),
                 "file_type": file_type,
                 "file_url": result.get("file_url", ""),
+                "oss_signed_url": result.get("oss_signed_url", ""),
                 "file_size_bytes": file_size_bytes,
                 "file_size_mb": file_size_mb,
                 "status": "success"
@@ -258,6 +259,7 @@ class UploadFileTool(Tool):
             return {
                 "status": "success",
                 "file_url": file_url,
+                "oss_signed_url": file_url,
                 "filename": filename,
                 "object_key": object_key,
                 "message": "File uploaded successfully",

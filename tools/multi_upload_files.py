@@ -47,6 +47,7 @@ class MultiUploadFilesTool(Tool):
                         "filename": result.get("filename", ""),
                         "file_type": result.get("file_type", "unknown"),
                         "file_url": result.get("file_url", ""),
+                        "oss_signed_url": result.get("oss_signed_url", ""),
                         "file_size_bytes": file_size_bytes,
                         "file_size_mb": file_size_mb,
                         "status": "success"
@@ -258,6 +259,7 @@ class MultiUploadFilesTool(Tool):
                     results.append({
                         "status": "success",
                         "file_url": file_url,
+                        "oss_signed_url": file_url,
                         "filename": current_filename,
                         "object_key": object_key,
                         "file_type": file_type,
